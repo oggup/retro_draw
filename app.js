@@ -32,6 +32,8 @@ function makeGrid(){
 };
 makeGrid();
 
+
+
 function onPaletteClick(){
    $(".palette .active").removeClass("active")
   .css("border-color","rgb(102, 88, 81)");
@@ -92,7 +94,13 @@ function onDragNDraw(){
 $(".controls .drag").click(onDragNDraw);
 
 
-$("#writecolor").val($("#colorwheel").val());
+
+
+$("#colorwheel").on("change", function changeInput(){
+  $("#writecolor").val($("#colorwheel").val());
+})
+
+
 function addPalette(){
   let newColor = $("#colorwheel").val();
   let button = $("<button>*_*</button>");
