@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+	
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(35deg, #9e937b,#1f3e57)
+}
+
+  header {
+  font-size: 64px;
+  letter-spacing: 32px;
+  font-family: "Monoton", monospace;
+  border-bottom: 1px dotted white;
+  margin-bottom: 64px;
+  color: white;
+  text-shadow: 
+  -11px -11px rgb(230, 36, 36),
+  -10px -10px #ccc, -9px -9px rgb(207, 33, 33),
+  -8px -8px rgb(235, 235, 235), -7px -7px rgb(126, 4, 4),
+  -6px -6px rgb(245, 244, 244) ,-5px -5px rgb(214, 8, 8),
+  -4px -4px rgb(255, 255, 255), -3px -3px rgb(223, 9, 9),
+  -2px -2px #ccc, -1px -1px rgb(194, 25, 25);
+
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:1500px;
+  background: linear-gradient(-45deg, rgb(209, 198, 198), grey);
+
+  border:inset rgb(139, 167, 184);
+  box-shadow: 10px 10px  rgb(209, 198, 198),-10px -10px  rgb(209, 198, 198),
+  9px 9px  rgb(209, 198, 198),-9px -9px  rgb(119, 110, 110),
+  8px 8px  rgb(209, 198, 198),-8px -8px  rgb(124, 117, 117),
+  7px 7px  rgb(209, 198, 198),-7px -7px  rgb(107, 103, 103),
+  6px 6px  rgb(209, 198, 198),-6px -6px  rgb(99, 94, 94),
+  5px 5px  rgb(209, 198, 198),-5px -5px  rgb(134, 130, 130),
+  4px 4px  rgb(209, 198, 198),-4px -4px  rgb(97, 92, 92),
+  3px 3px  rgb(209, 198, 198),-3px -3px  rgb(90, 85, 85),
+  2px 2px  rgb(209, 198, 198),-2px -2px  rgb(104, 95, 95);
+  
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+
+.palette, .controls {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.palette button {
+  margin-right: 4px;
+}
+
+.palette button
+ {
+  
+  cursor: pointer;
+  flex: 0 0 64px;
+  width:64px;
+  height: 70px;;
+  border: inset 5px rgb(102, 88, 81);
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.palette button {
+  transition: all .3s ease;
+}
+
+.palette button.active {
+  border: 4px inset gold;
+  border-radius: 50%;
+  transform: scale(1.3) rotate(45deg);
+}
+
+.grid {
+  width: 514px;
+  height: 514px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 48px;
+  border: 1px solid black;
+  background: rgb(152, 182, 151); 
+}
+
+.cell {
+  flex: 0 0 64px;
+  height: 64px;
+  border: 1px dotted black;
+  
+}
+
+.controls button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: rgb(202, 152, 58);
+  font-weight: bold;
+  font-size: small;
+  color: rgb(128, 63, 26); ;
+  text-shadow: -1px -1px black;
+  height:100px;
+  width: 100px;
+  
+  border: inset 5px rgb(128, 63, 26);
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+}
+
+
+#colorwheel{ 
+
+  width:100px;
+}
+
+#writeColor{
+  width:100px;
+}
+.newButton{
+  height:30px;
+}
