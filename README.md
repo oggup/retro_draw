@@ -1,0 +1,1 @@
+In this project I created an interactive website that allows the user to play around with a grid and add selected colors in numerous ways. I demonstrate my knowledge of adjusting CSS and HTML using jQuery.
