@@ -4,7 +4,7 @@
 
 
 function makePalette(){
-  const PALETTE = [
+    const PALETTE = [
     "red",
     "orange",
     "yellow",
@@ -23,6 +23,7 @@ function makePalette(){
   //active button has a gold border
   $('.palette button').first().addClass('active');
   $('.palette .active').css("border-color", "gold");
+  console.log(this)
 };
 makePalette();
 
@@ -39,11 +40,12 @@ function onPaletteClick(){
   //remove border color from active class
   //make clicked colo the active one
   $(".palette .active").removeClass("active")
-  .css("border-color","black");
+  .css("border-color","rgb(102, 88, 81)");
 
   $(this).toggleClass("active");
   $(this).css("border-color", "gold");
   $(this).css("background-color");
+  console.log(this);
 };
 
 $('.palette button').click(onPaletteClick);
@@ -140,7 +142,10 @@ $("#writecolor").val($("#colorwheel").val());
 function addPalette(){
   let newColor = $("#colorwheel").val();
   let button = $("<button>*_*</button>");
+  button.addClass("newButton");
   button.css("background-color",$("#writecolor").val());
   $(".palette").append(button);
+
 }
 $(".controls .newButton").click(addPalette);
+$(".palette").on("click", ".newButton",onPaletteClick);
