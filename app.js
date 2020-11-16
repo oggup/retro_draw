@@ -1,8 +1,4 @@
-
-
 /*my palette maker, includes a loop to pick a color and makes it into a button*/
-
-
 function makePalette(){
     const PALETTE = [
     "red",
@@ -37,9 +33,7 @@ function makeGrid(){
 makeGrid();
 
 function onPaletteClick(){
-  //remove border color from active class
-  //make clicked colo the active one
-  $(".palette .active").removeClass("active")
+   $(".palette .active").removeClass("active")
   .css("border-color","rgb(102, 88, 81)");
 
   $(this).toggleClass("active");
@@ -49,63 +43,23 @@ function onPaletteClick(){
 };
 
 $('.palette button').click(onPaletteClick);
-
-/* stuck here*/
-
 $('.grid .cell').addClass("empty");
 $(".grid .cell .empty").css("background-color","");
 function onGridClick(){
-  let color = $(".palette .active").css("background-color")
-  $(this).toggleClass("empty");
-  $(this).toggleClass("coloredIn");
-if($(this).hasClass("empty")){
-   $(this).css("background-color",color)
-}
-if ($(this).hasClass("coloredIn")){
-  $()
-  $(this).css("background-color",$(".palette .active").css("background-color"))
-}else{
-  $(this).css("background-color","");
-
-}
-  console.log(this);
+  let color = $(".palette .active").css("background-color");
+  let cellBg = $(this).css("background-color");
   
+if(color === cellBg){
+    $(this).css("background-color","");
+    $(this).addClass("empty");
+}
+else{
+  $(this).css("background-color",color);
+  $(this).addClass("coloredIn");
+}
+console.log(this);
 };
-
-
-  //here I'm trying to say if the cell background isnt equal to the background of the palette, fill it in with new color instead of erasin.
-  /*if($(".coloredIn").css("background-color")!= (".palette .active").css("background-color")){
-    $(this).css("background-color",$(".palette .active").css("background-color"));
-  }
-  
-   
-*/
-
-
-
-/*
-in case i delete
-function onGridClick(){
-  
-  $(this).toggleClass("empty");
-  $(this).toggleClass("coloredIn");
-if($(this).hasClass("empty")){
-   $(this).css("background-color",$(".palette .active").css("background-color"))
-}
-if ($(this).hasClass("coloredIn")){
-  $(this).css("background-color",$(".palette .active").css("background-color"))
-}else{
-  $(this).css("background-color","");
-
-}
-  console.log(this);
-  
-};
-*/
-
-
 $(".grid .cell").click(onGridClick);
- 
 function onClearClick(){
   $(".grid .cell").css("background-color","");
   $(".grid .cell").removeClass("coloredIn");
